@@ -1,225 +1,340 @@
 <div align="center">
 
-# 🚀 Ensemble Learning — Classification & Regression
+# 🚀 Ensemble Learning — Student Performance Intelligence
 
-### A Complete Machine Learning Comparison of Bagging, Boosting, Voting & Stacking
+### Classification + Regression using Modern Ensemble Machine Learning
 
 <p align="center">
-  <img src="assets/workflow.png" alt="Ensemble Learning Workflow" width="92%">
+  <img src="assets/workflow.png" alt="Ensemble Learning Workflow" width="100%">
+</p>
+
+<p align="center">
+  <b>Bagging</b> •
+  <b>AdaBoost</b> •
+  <b>Gradient Boosting</b> •
+  <b>LightGBM</b> •
+  <b>XGBoost</b> •
+  <b>Voting</b> •
+  <b>Stacking</b>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?logo=scikit-learn&logoColor=white">
-  <img src="https://img.shields.io/badge/LightGBM-Boosting-success">
-  <img src="https://img.shields.io/badge/XGBoost-Boosting-red">
   <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white">
   <img src="https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy&logoColor=white">
-  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white">
-</p>
-
-<p>
-<b>🎯 End-to-End Ensemble Learning Project</b><br>
-Classification + Regression + Model Comparison + Performance Analysis
+  <img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?logo=scikit-learn&logoColor=white">
+  <img src="https://img.shields.io/badge/LightGBM-Boosting-9ACD32">
+  <img src="https://img.shields.io/badge/XGBoost-Boosting-EC4E20">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white">
 </p>
 
 </div>
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This project demonstrates an end-to-end **Ensemble Learning** workflow using the dataset:
+This project is a complete **Ensemble Learning Machine Learning system** designed to solve two different predictive tasks from student learning and activity data.
 
-```text
-dataset.5.csv
-```
+### 🎯 Two Machine Learning Tasks
 
-The project solves two machine-learning problems:
+| Task              | Target              | Objective                                      |
+| ----------------- | ------------------- | ---------------------------------------------- |
+| 🎯 Classification | `completion_status` | Predict whether a student completes the course |
+| 📈 Regression     | `final_score`       | Predict the student's final score              |
 
-* 🎯 **Classification:** Predict `completion_status`
-* 📈 **Regression:** Predict `final_score`
-
-Multiple ensemble techniques are trained, evaluated, and compared to understand which approach performs best.
-
-The main objective is to demonstrate how combining multiple machine-learning models can improve predictive performance compared with a single Decision Tree.
+The project compares multiple ensemble learning strategies and evaluates their performance using appropriate classification and regression metrics.
 
 ---
 
-# 🏆 Final Results
+# 🏆 Final Model Performance
 
-| Task              | Best Model              |           Best Result |
-| ----------------- | ----------------------- | --------------------: |
-| 🟦 Classification | **Stacking Classifier** | Accuracy = **74.42%** |
-| 🟦 Classification | **Stacking Classifier** |       F1 = **0.6316** |
-| 🟦 Classification | **Stacking Classifier** |  ROC-AUC = **0.7940** |
-| 🟩 Regression     | **Stacking Regressor**  |      MAE = **7.8049** |
-| 🟩 Regression     | **Stacking Regressor**  |     RMSE = **9.7166** |
-| 🟩 Regression     | **Stacking Regressor**  |       R² = **0.4947** |
+## 🎯 Best Classification Model
 
-> 🥇 **Stacking achieved the strongest reported performance for both classification and regression.**
+### 🥇 Stacking Classifier
+
+| Metric    |      Score |
+| --------- | ---------: |
+| Accuracy  | **74.42%** |
+| Precision | **0.6867** |
+| Recall    | **0.5846** |
+| F1 Score  | **0.6316** |
+| ROC-AUC   | **0.7940** |
+
+> **Stacking achieved the strongest overall classification performance on the test set.**
+
+---
+
+## 📈 Best Regression Model
+
+### 🥇 Stacking Regressor
+
+| Metric |      Score |
+| ------ | ---------: |
+| MAE    | **7.8049** |
+| RMSE   | **9.7166** |
+| R²     | **0.4947** |
+
+> **Stacking achieved the lowest prediction error and highest R² among the evaluated regression models.**
 
 ---
 
 # 🎯 Project Objectives
 
-The main objectives of this project are:
+The project focuses on answering the following questions:
 
-* Understand Ensemble Learning
-* Build a Decision Tree baseline
-* Implement Bagging
-* Implement AdaBoost
-* Implement Gradient Boosting
-* Implement LightGBM
-* Implement XGBoost
-* Compare Hard Voting and Soft Voting
-* Implement Stacking
-* Evaluate classification models
-* Evaluate regression models
-* Compare model performance
-* Select the best-performing model
+* Can ensemble models outperform a single Decision Tree?
+* Which boosting algorithm performs best?
+* How does Bagging reduce model variance?
+* How does AdaBoost improve weak learners?
+* How does Gradient Boosting reduce prediction errors?
+* How do LightGBM and XGBoost perform?
+* Does Hard Voting outperform Soft Voting?
+* Can Stacking improve predictive performance?
+* Which model is best for classification?
+* Which model is best for regression?
 
 ---
 
-# 📊 Dataset Information
+# 🗂️ Dataset
 
-| Property              |                 Value |
-| --------------------- | --------------------: |
-| Dataset               |       `dataset.5.csv` |
-| Rows                  |             **5,200** |
-| Columns               |                **19** |
-| Training Data         |             **4,160** |
-| Testing Data          |             **1,040** |
-| Train/Test Split      |             **80/20** |
-| Processed Features    |                **30** |
-| Missing-Value Columns | **3 numeric columns** |
+The project uses:
+
+```text
+dataset.5.csv
+```
+
+### Dataset Snapshot
+
+| Property              |               Value |
+| --------------------- | ------------------: |
+| Total Rows            |           **5,200** |
+| Total Columns         |              **19** |
+| Classification Target | `completion_status` |
+| Regression Target     |       `final_score` |
+| Train/Test Split      |       **80% / 20%** |
+| Training Samples      |           **4,160** |
+| Testing Samples       |           **1,040** |
+| Processed Features    |              **30** |
+
+---
+
+# 🔍 Important Features
+
+### 👤 Student Profile
+
+```text
+age
+country_region
+device_type
+education_background
+```
+
+### 📚 Course Information
+
+```text
+course_level
+course_category
+course_start_date
+week_of_year
+```
+
+### 🖥️ Learning Activity
+
+```text
+sessions
+time_spent_hours
+videos_watched
+quiz_attempts
+assignments_submitted
+forum_posts
+```
+
+### 📊 Performance Features
+
+```text
+avg_quiz_score
+attendance_rate
+```
 
 ### 🎯 Target Variables
 
 ```text
-Classification Target → completion_status
-
-Regression Target     → final_score
+completion_status
+final_score
 ```
 
 ---
 
-# 🔄 Machine Learning Workflow
+# 📊 Data Understanding
+
+The classification target contains two classes:
+
+| Completion Status | Count |  Share |
+| ----------------- | ----: | -----: |
+| 0                 | 3,248 | 62.45% |
+| 1                 | 1,952 | 37.55% |
+
+### Final Score Statistics
+
+| Statistic          |  Value |
+| ------------------ | -----: |
+| Mean               |  74.82 |
+| Standard Deviation |  13.53 |
+| Minimum            |  35.20 |
+| Median             |  74.10 |
+| Maximum            | 100.00 |
+
+---
+
+# 🧹 Data Preprocessing
+
+The project uses a reusable:
 
 ```text
-📂 Dataset
-      ↓
-🔍 Data Understanding
-      ↓
-🧹 Missing Value Handling
-      ↓
-🔤 Encoding
-      ↓
-📏 Feature Preparation / Scaling
-      ↓
-✂️ Train-Test Split
-      ↓
-🌳 Decision Tree Baseline
-      ↓
-👜 Bagging
-      ↓
-⚡ AdaBoost
-      ↓
-📈 Gradient Boosting
-      ↓
-💡 LightGBM
-      ↓
-🚀 XGBoost
-      ↓
-🗳️ Voting
-      ↓
-🧩 Stacking
-      ↓
-📊 Model Evaluation
-      ↓
-🏆 Best Model Selection
+ColumnTransformer + Pipeline
 ```
 
----
+approach.
 
-# 🧠 Ensemble Learning Techniques
-
-## 🌳 1. Decision Tree
-
-A Decision Tree is used as the **baseline model**.
-
-It helps us understand whether ensemble methods provide an improvement over a single tree.
-
----
-
-## 👜 2. Bagging
-
-**Bagging = Bootstrap Aggregating**
-
-Multiple models are trained on different bootstrap samples and their predictions are combined.
-
-### Benefits
-
-* Reduces variance
-* Improves stability
-* Reduces overfitting compared with a single tree
-
----
-
-## ⚡ 3. AdaBoost
-
-AdaBoost trains weak learners sequentially.
-
-Each new learner focuses more on observations that were incorrectly predicted by previous learners.
+### 🔢 Numerical Features
 
 ```text
-Weak Learner
+Missing Values
       ↓
-Find Errors
+Median Imputation
       ↓
-Increase Importance
+StandardScaler
+```
+
+### 🔤 Categorical Features
+
+```text
+Missing Values
       ↓
-Next Learner
+Most Frequent Imputation
       ↓
-Final Combined Prediction
+OneHotEncoder
+      ↓
+Unknown Categories Ignored
+```
+
+After preprocessing:
+
+```text
+Training samples : 4,160
+Testing samples  : 1,040
+Processed features: 30
 ```
 
 ---
 
-## 📈 4. Gradient Boosting
+# 🧠 Machine Learning Architecture
 
-Gradient Boosting builds models sequentially where every new model tries to reduce the errors made by previous models.
+<p align="center">
+  <img src="assets/workflow.png" alt="Machine Learning Architecture" width="100%">
+</p>
 
-It is powerful for both:
-
-* Classification
-* Regression
-
----
-
-## 💡 5. LightGBM
-
-LightGBM is a gradient-boosting framework designed for efficient and fast tree-based learning.
-
-It is evaluated in this project for both classification and regression.
+The project explores both **parallel ensemble learning** and **sequential ensemble learning** techniques.
 
 ---
 
-## 🚀 6. XGBoost
+# 1️⃣ Bagging
 
-XGBoost is another powerful gradient-boosting algorithm.
+**Bagging — Bootstrap Aggregating**
 
-It is evaluated against other ensemble techniques to compare predictive performance.
+Bagging trains multiple models independently on bootstrap samples and combines their predictions.
+
+### Implemented
+
+```text
+Bagging Classifier
+Bagging Regressor
+```
+
+### Main Benefit
+
+> Reduces variance and improves model stability.
 
 ---
 
-## 🗳️ 7. Voting
+# 2️⃣ AdaBoost
 
-Voting combines predictions from multiple models.
+AdaBoost builds weak learners sequentially.
 
-### Hard Voting
+Later learners focus more on observations that were difficult for previous learners.
 
-The final class is selected using the majority vote.
+### Implemented
+
+```text
+AdaBoost Classifier
+AdaBoost Regressor
+```
+
+### Main Benefit
+
+> Improves weak learners by focusing on difficult observations.
+
+---
+
+# 3️⃣ Gradient Boosting
+
+Gradient Boosting builds models sequentially to reduce the errors made by previous models.
+
+### Implemented
+
+```text
+GradientBoostingClassifier
+GradientBoostingRegressor
+```
+
+The project also explores:
+
+```text
+Learning Rate → 0.01, 0.05, 0.10
+
+Estimators → 50, 100, 200
+```
+
+---
+
+# 4️⃣ LightGBM
+
+**Light Gradient Boosting Machine**
+
+LightGBM is an efficient gradient boosting framework designed for fast and scalable machine learning.
+
+### Implemented
+
+```text
+LGBMClassifier
+LGBMRegressor
+```
+
+---
+
+# 5️⃣ XGBoost
+
+**Extreme Gradient Boosting**
+
+XGBoost is a powerful and regularized gradient boosting algorithm.
+
+### Implemented
+
+```text
+XGBClassifier
+XGBRegressor
+```
+
+---
+
+# 6️⃣ Voting Ensemble
+
+Voting combines predictions from multiple classifiers.
+
+### 🗳️ Hard Voting
+
+Uses the majority class prediction.
 
 ```text
 Model 1 → Class 1
@@ -229,95 +344,89 @@ Model 3 → Class 1
 Final → Class 1
 ```
 
-### Soft Voting
+### 🗳️ Soft Voting
 
-Soft Voting combines predicted probabilities and selects the class with the highest combined probability.
-
----
-
-## 🧩 8. Stacking
-
-Stacking combines several base learners and then uses another model called a **meta-model** to make the final prediction.
+Uses predicted probabilities from different classifiers.
 
 ```text
-Model 1 ─┐
-Model 2 ─┤
-Model 3 ─┼──→ Meta Model ──→ Final Prediction
-Model 4 ─┤
-Model 5 ─┘
+Probability
+      ↓
+Average
+      ↓
+Final Prediction
 ```
 
 ---
 
-# 🧹 Data Preprocessing
+# 7️⃣ Stacking
 
-The notebook performs the following preprocessing steps:
+Stacking combines multiple base models and uses a **meta-learner** to learn how their predictions should be combined.
 
-* Dataset loading
-* Feature and target separation
-* Missing-value handling
-* Categorical feature encoding
-* Numerical feature preparation
-* Feature scaling where required
-* Train/Test splitting
-
-After preprocessing, the feature space contains:
+### Classification
 
 ```text
-30 Features
+Base Models
+    ↓
+Predictions
+    ↓
+Meta Learner
+    ↓
+Final Classification
+```
+
+### Regression
+
+```text
+Base Models
+    ↓
+Predictions
+    ↓
+Meta Learner
+    ↓
+Final Score Prediction
 ```
 
 ---
 
-# 🟦 Classification Model Comparison
+# 📊 Classification Model Comparison
 
-Classification models were evaluated using:
+<p align="center">
+  <img src="assets/classification_model_comparison.png" alt="Classification Model Comparison" width="100%">
+</p>
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* ROC-AUC
-
-| Model             |   Accuracy | Precision | Recall |         F1 |    ROC-AUC |
-| ----------------- | ---------: | --------: | -----: | ---------: | ---------: |
-| Decision Tree     |     0.6298 |         — |      — |     0.5157 |     0.6090 |
-| Bagging           |     0.7221 |    0.6472 | 0.5692 |     0.6057 |     0.7739 |
-| AdaBoost          |     0.7365 |    0.6883 | 0.5436 |     0.6074 |     0.7850 |
-| Gradient Boosting |     0.7385 |    0.6832 | 0.5641 |     0.6180 |     0.7896 |
-| LightGBM          |     0.7288 |    0.6656 | 0.5564 |     0.6061 |     0.7805 |
-| XGBoost           |     0.7356 |    0.6727 | 0.5744 |     0.6196 |     0.7875 |
-| Hard Voting       |     0.7413 |    0.6921 | 0.5590 |     0.6184 |          — |
-| Soft Voting       |     0.7346 |    0.6770 | 0.5590 |     0.6124 |          — |
-| **Stacking**      | **0.7442** |         — |      — | **0.6316** | **0.7940** |
+| Model                |   Accuracy |  Precision |     Recall |         F1 |    ROC-AUC |
+| -------------------- | ---------: | ---------: | ---------: | ---------: | ---------: |
+| Single Decision Tree |     0.6298 |     0.5062 |     0.5256 |     0.5157 |     0.6090 |
+| Bagging              |     0.7221 |     0.6472 |     0.5692 |     0.6057 |     0.7739 |
+| AdaBoost             |     0.7365 |     0.6883 |     0.5436 |     0.6074 |     0.7850 |
+| Gradient Boosting    |     0.7385 |     0.6832 |     0.5641 |     0.6180 |     0.7896 |
+| LightGBM             |     0.7288 |     0.6656 |     0.5564 |     0.6061 |     0.7805 |
+| XGBoost              |     0.7356 |     0.6727 |     0.5744 |     0.6196 |     0.7875 |
+| Hard Voting          |     0.7413 |     0.6921 |     0.5590 |     0.6184 |          — |
+| Soft Voting          |     0.7346 |     0.6770 |     0.5590 |     0.6124 |     0.7891 |
+| 🏆 **Stacking**      | **0.7442** | **0.6867** | **0.5846** | **0.6316** | **0.7940** |
 
 ---
 
-## 🥇 Best Classification Model
+# 🥇 Classification Winner
 
-### Stacking Classifier
+## Stacking Classifier
 
 ```text
-Accuracy  → 0.7442
+Accuracy  → 74.42%
 F1 Score  → 0.6316
 ROC-AUC   → 0.7940
 ```
 
-<p align="center">
-  <img src="assets/classification_model_comparison.png"
-       alt="Classification Model Comparison"
-       width="90%">
-</p>
+Stacking produced the strongest F1 and ROC-AUC among the evaluated classification models.
 
 ---
 
-# 🟩 Regression Model Comparison
+# 📈 Regression Performance
 
-Regression models were evaluated using:
-
-* MAE
-* RMSE
-* R² Score
+<p align="center">
+  <img src="assets/regression_rmse_comparison.png" alt="Regression RMSE Comparison" width="100%">
+</p>
 
 | Model             |        MAE |       RMSE |         R² |
 | ----------------- | ---------: | ---------: | ---------: |
@@ -325,110 +434,122 @@ Regression models were evaluated using:
 | Gradient Boosting |     7.9645 |     9.9190 |     0.4734 |
 | LightGBM          |     7.9309 |     9.8756 |     0.4780 |
 | XGBoost           |     7.9205 |     9.8749 |     0.4781 |
-| **Stacking**      | **7.8049** | **9.7166** | **0.4947** |
+| 🏆 **Stacking**   | **7.8049** | **9.7166** | **0.4947** |
 
 ---
 
-## 🥇 Best Regression Model
+# 📊 Regression R² Comparison
 
-### Stacking Regressor
+<p align="center">
+  <img src="assets/regression_r2_comparison.png" alt="Regression R2 Comparison" width="100%">
+</p>
+
+### 🥇 Regression Winner
 
 ```text
+Model → Stacking Regressor
+
 MAE  → 7.8049
 RMSE → 9.7166
 R²   → 0.4947
 ```
 
-<p align="center">
-  <img src="assets/regression_rmse_comparison.png"
-       alt="Regression RMSE Comparison"
-       width="90%">
-</p>
-
-<p align="center">
-  <img src="assets/regression_r2_comparison.png"
-       alt="Regression R2 Comparison"
-       width="90%">
-</p>
-
 ---
 
-# 🆚 Decision Tree vs Bagging
+# ⚔️ Decision Tree vs Bagging
 
-| Metric                  | Decision Tree |     Bagging |
-| ----------------------- | ------------: | ----------: |
-| Classification Accuracy |        0.6298 |  **0.7221** |
-| Regression RMSE         |       14.3772 | **10.0406** |
-| Regression R²           |       -0.1063 |  **0.4604** |
+One of the key experiments was comparing a single Decision Tree with Bagging.
 
-### 📌 Observation
+| Model         | Classification Accuracy | Regression RMSE | Regression R² |
+| ------------- | ----------------------: | --------------: | ------------: |
+| Decision Tree |                  62.98% |         14.3772 |       -0.1063 |
+| Bagging       |              **72.21%** |     **10.0406** |    **0.4604** |
 
-Bagging produced a significant improvement over the single Decision Tree baseline.
+### 💡 Key Insight
+
+Bagging significantly improved performance over the single Decision Tree.
 
 ```text
 Classification Accuracy
 
-Decision Tree → 0.6298
-Bagging       → 0.7221
+62.98%
+   ↓
+72.21%
+
++9.23 percentage points
 ```
 
-Regression performance also improved substantially:
+Regression also improved considerably:
 
 ```text
 RMSE
-
-Decision Tree → 14.3772
-Bagging       → 10.0406
+14.3772
+   ↓
+10.0406
 ```
+
+This demonstrates how combining multiple learners can improve stability and generalization.
 
 ---
 
 # 🗳️ Hard Voting vs Soft Voting
 
-| Voting Method   |   Accuracy |  Precision | Recall |         F1 |
-| --------------- | ---------: | ---------: | -----: | ---------: |
-| **Hard Voting** | **0.7413** | **0.6921** | 0.5590 | **0.6184** |
-| Soft Voting     |     0.7346 |     0.6770 | 0.5590 |     0.6124 |
+| Method         |   Accuracy |  Precision | Recall |         F1 |
+| -------------- | ---------: | ---------: | -----: | ---------: |
+| 🥇 Hard Voting | **0.7413** | **0.6921** | 0.5590 | **0.6184** |
+| Soft Voting    |     0.7346 |     0.6770 | 0.5590 |     0.6124 |
 
-### 🏆 Result
+### Result
 
-For the reported results, **Hard Voting performed better than Soft Voting** on Accuracy, Precision and F1.
+**Hard Voting performed slightly better than Soft Voting on this test set.**
 
 ---
 
-# 📐 Evaluation Metrics
+# 📏 Evaluation Metrics
 
 ## Classification Metrics
 
 ### Accuracy
 
+Measures the proportion of correct predictions.
+
 ```text
-Accuracy = Correct Predictions / Total Predictions
+Accuracy =
+Correct Predictions / Total Predictions
 ```
 
 ### Precision
 
+Measures how many predicted positive cases were actually positive.
+
 ```text
-Precision = TP / (TP + FP)
+Precision =
+TP / (TP + FP)
 ```
 
 ### Recall
 
+Measures how many actual positive cases were correctly identified.
+
 ```text
-Recall = TP / (TP + FN)
+Recall =
+TP / (TP + FN)
 ```
 
 ### F1 Score
 
+Balances Precision and Recall.
+
 ```text
-F1 = 2 × (Precision × Recall)
-     --------------------------------
-       Precision + Recall
+F1 =
+2 × Precision × Recall
+----------------------
+Precision + Recall
 ```
 
 ### ROC-AUC
 
-ROC-AUC measures how effectively a classification model separates the classes across different decision thresholds.
+Measures the model's ability to distinguish between classes.
 
 ---
 
@@ -436,267 +557,344 @@ ROC-AUC measures how effectively a classification model separates the classes ac
 
 ### MAE
 
-Mean Absolute Error measures the average absolute difference between actual and predicted values.
+Average absolute prediction error.
+
+```text
+MAE =
+Mean(|Actual - Predicted|)
+```
 
 ### RMSE
 
-Root Mean Squared Error gives greater importance to larger prediction errors.
-
-### R² Score
-
-R² represents the proportion of variance explained by the regression model.
-
----
-
-# 📸 Project Visualizations
-
-## 🔄 Workflow
-
-<p align="center">
-  <img src="assets/workflow.png"
-       alt="Ensemble Learning Workflow"
-       width="90%">
-</p>
-
----
-
-## 📊 Classification Performance
-
-<p align="center">
-  <img src="assets/classification_model_comparison.png"
-       alt="Classification Performance"
-       width="90%">
-</p>
-
----
-
-## 📈 Regression RMSE
-
-<p align="center">
-  <img src="assets/regression_rmse_comparison.png"
-       alt="Regression RMSE"
-       width="90%">
-</p>
-
----
-
-## 📈 Regression R²
-
-<p align="center">
-  <img src="assets/regression_r2_comparison.png"
-       alt="Regression R2"
-       width="90%">
-</p>
-
----
-
-# 🏗️ Project Structure
+Penalizes larger prediction errors more strongly.
 
 ```text
-Ensemble-Learning/
-│
-├── 📓 project5.ipynb
-├── 📄 dataset.5.csv
-├── 📄 README.md
-│
-└── 📁 assets/
-    │
-    ├── 🖼️ workflow.png
-    ├── 🖼️ classification_model_comparison.png
-    ├── 🖼️ regression_rmse_comparison.png
-    ├── 🖼️ regression_r2_comparison.png
-    ├── 🖼️ notebook_output_1.png
-    └── 🖼️ notebook_output_2.png
+RMSE =
+√ Mean((Actual - Predicted)²)
+```
+
+### R²
+
+Measures the proportion of variance explained by the model.
+
+```text
+R² =
+1 - SS_res / SS_tot
 ```
 
 ---
 
-# 💻 Technologies Used
+# 🖼️ Project Visualizations
 
-| Technology          | Purpose             |
-| ------------------- | ------------------- |
-| 🐍 Python           | Programming         |
-| 🐼 Pandas           | Data Manipulation   |
-| 🔢 NumPy            | Numerical Computing |
-| 📊 Matplotlib       | Visualization       |
-| 🤖 Scikit-learn     | Machine Learning    |
-| 💡 LightGBM         | Gradient Boosting   |
-| 🚀 XGBoost          | Gradient Boosting   |
-| 📓 Jupyter Notebook | Development         |
+### 🔹 Ensemble Workflow
+
+<img src="assets/workflow.png" alt="Workflow" width="100%">
+
+### 🔹 Classification Comparison
+
+<img src="assets/classification_model_comparison.png" alt="Classification Comparison" width="100%">
+
+### 🔹 Regression RMSE
+
+<img src="assets/regression_rmse_comparison.png" alt="Regression RMSE" width="100%">
+
+### 🔹 Regression R²
+
+<img src="assets/regression_r2_comparison.png" alt="Regression R2" width="100%">
+
+---
+
+# 📸 Notebook Results
+
+<p align="center">
+  <img src="assets/notebook_output_1.png" alt="Notebook Output 1" width="95%">
+</p>
+
+<p align="center">
+  <img src="assets/notebook_output_2.png" alt="Notebook Output 2" width="95%">
+</p>
+
+---
+
+# 🔄 End-to-End Workflow
+
+```text
+                RAW DATASET
+                     │
+                     ▼
+             Data Understanding
+                     │
+                     ▼
+          Missing Value Analysis
+                     │
+                     ▼
+           Feature / Target Split
+                     │
+                     ▼
+             Train-Test Split
+                     │
+                     ▼
+       Imputation + Encoding + Scaling
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+   CLASSIFICATION           REGRESSION
+          │                     │
+          ▼                     ▼
+   Bagging / AdaBoost     Bagging / AdaBoost
+   Gradient Boosting      Gradient Boosting
+   LightGBM / XGBoost     LightGBM / XGBoost
+   Voting / Stacking      Stacking
+          │                     │
+          ▼                     ▼
+ Accuracy / Precision       MAE / RMSE
+ Recall / F1 / ROC-AUC          R²
+          │                     │
+          ▼                     ▼
+ Stacking Classifier      Stacking Regressor
+```
+
+---
+
+# 🧰 Tech Stack
+
+| Technology          | Purpose               |
+| ------------------- | --------------------- |
+| 🐍 Python 3.13      | Programming           |
+| 🐼 Pandas           | Data manipulation     |
+| 🔢 NumPy            | Numerical computation |
+| 📊 Matplotlib       | Data visualization    |
+| 🤖 Scikit-learn     | ML & preprocessing    |
+| ⚡ LightGBM          | Gradient boosting     |
+| 🚀 XGBoost          | Gradient boosting     |
+| 📓 Jupyter Notebook | Development           |
+
+---
+
+# 📁 Project Structure
+
+```text
+Ensemble-Learning/
+│
+├── 📓 Project_5_Ensemble_Learning.ipynb
+├── 📊 dataset.5.csv
+├── 📖 README.md
+│
+└── 📁 assets/
+    ├── workflow.png
+    ├── classification_model_comparison.png
+    ├── regression_rmse_comparison.png
+    ├── regression_r2_comparison.png
+    ├── notebook_output_1.png
+    └── notebook_output_2.png
+```
+
+> ⚠️ Keep the `assets` folder in the same location as `README.md` so GitHub can correctly display the images.
 
 ---
 
 # ⚙️ Installation
 
-Clone the repository:
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY-URL>
+git clone https://github.com/pmanan2031-web/ENSEMBLE-LEARNING.git
 ```
-
-Move into the project:
 
 ```bash
-cd <YOUR-PROJECT-FOLDER>
+cd ENSEMBLE-LEARNING
 ```
 
-Install required libraries:
+### 2️⃣ Install Required Libraries
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn lightgbm xgboost jupyter
 ```
 
-Launch Jupyter Notebook:
+### 3️⃣ Start Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+### 4️⃣ Open the Notebook
 
 ```text
-project5.ipynb
+Project_5_Ensemble_Learning.ipynb
 ```
 
-Then run all cells.
-
----
-
-# 📌 Important File Requirement
-
-Make sure the dataset is located in the same directory as the notebook:
+Make sure the dataset is available:
 
 ```text
-project5.ipynb
 dataset.5.csv
 ```
 
-Otherwise the dataset-loading cell may generate a file-not-found error.
+---
+
+# ▶️ How to Use
+
+```text
+1. Load dataset
+      ↓
+2. Explore data
+      ↓
+3. Handle missing values
+      ↓
+4. Encode categorical features
+      ↓
+5. Scale numerical features
+      ↓
+6. Train ensemble models
+      ↓
+7. Evaluate models
+      ↓
+8. Compare performance
+      ↓
+9. Select best models
+```
 
 ---
 
-# 🎓 Key Learnings
+# 💡 Key Learnings
 
-This project helped demonstrate:
+### 🧠 Ensemble Learning
 
-* Ensemble Learning fundamentals
-* Bootstrap Aggregation
-* Bagging
-* Boosting
-* AdaBoost
-* Gradient Boosting
-* LightGBM
-* XGBoost
-* Voting Classifier
-* Hard Voting
-* Soft Voting
-* Stacking
-* Classification metrics
-* Regression metrics
-* Model comparison
-* Baseline comparison
-* Model selection
+Combining multiple models can improve predictive performance and stability.
+
+### 📦 Bagging
+
+Bagging is particularly useful for reducing variance and stabilizing tree-based models.
+
+### 🚀 Boosting
+
+Boosting builds models sequentially, allowing later models to focus on previous errors.
+
+### 🗳️ Voting
+
+Voting combines predictions from multiple classifiers using majority voting or probability averaging.
+
+### 🧩 Stacking
+
+Stacking uses a meta-model to learn how different base models should be combined.
 
 ---
 
-# 🔍 Key Insights
+# 🔥 Key Project Insights
 
-### Insight 1 — Ensemble > Single Tree
+### Insight 1 — Ensemble > Single Model
 
-Bagging significantly improved the reported baseline performance.
+Bagging improved the Decision Tree classification accuracy from:
 
-### Insight 2 — Boosting is Powerful
+```text
+62.98% → 72.21%
+```
 
-AdaBoost, Gradient Boosting, LightGBM and XGBoost all produced stronger results than the single Decision Tree on the reported classification metrics.
+### Insight 2 — Stacking Was the Overall Winner
 
-### Insight 3 — Voting Strategies Differ
-
-Hard Voting slightly outperformed Soft Voting on the reported classification metrics.
-
-### Insight 4 — Stacking Performed Best
-
-Stacking achieved the strongest reported results in both tasks.
+Stacking achieved the best result for both tasks:
 
 ```text
 Classification
-Accuracy → 74.42%
-F1       → 0.6316
-ROC-AUC  → 0.7940
+F1 = 0.6316
+ROC-AUC = 0.7940
 
 Regression
-MAE  → 7.8049
-RMSE → 9.7166
-R²   → 0.4947
+R² = 0.4947
+RMSE = 9.7166
+MAE = 7.8049
 ```
+
+### Insight 3 — Boosting Models Are Competitive
+
+Gradient Boosting, LightGBM and XGBoost all produced strong results across the experiments.
+
+### Insight 4 — Voting Behavior
+
+Hard Voting slightly outperformed Soft Voting on this dataset.
 
 ---
 
-# ✅ Project Checklist
+# 📋 Project Checklist
 
-* [x] Dataset Loading
-* [x] Data Understanding
-* [x] Missing Value Handling
-* [x] Encoding
-* [x] Feature Preparation
-* [x] Train-Test Split
-* [x] Decision Tree
-* [x] Bagging
-* [x] AdaBoost
-* [x] Gradient Boosting
-* [x] LightGBM
-* [x] XGBoost
+* [x] Dataset loading
+* [x] Data understanding
+* [x] Missing value analysis
+* [x] Train/Test split
+* [x] Numerical preprocessing
+* [x] Categorical encoding
+* [x] Feature scaling
+* [x] Decision Tree baseline
+* [x] Bagging Classifier
+* [x] Bagging Regressor
+* [x] Bagging vs base model
+* [x] AdaBoost Classifier
+* [x] AdaBoost Regressor
+* [x] Gradient Boosting Classifier
+* [x] Gradient Boosting Regressor
+* [x] Learning rate analysis
+* [x] Estimator analysis
+* [x] LightGBM Classifier
+* [x] LightGBM Regressor
+* [x] XGBoost Classifier
+* [x] XGBoost Regressor
+* [x] Boosting comparison
 * [x] Hard Voting
 * [x] Soft Voting
-* [x] Stacking
-* [x] Classification Evaluation
-* [x] Regression Evaluation
-* [x] Model Comparison
-* [x] Best Model Selection
-* [x] Visualization
-* [x] Final Analysis
+* [x] Stacking Classifier
+* [x] Stacking Regressor
+* [x] Classification evaluation
+* [x] Regression evaluation
+* [x] Model comparison
+* [x] Best model selection
+* [x] Final analysis
 
 ---
 
-# 🏁 Conclusion
+# 🚀 Future Improvements
 
-This project demonstrates how different **Ensemble Learning techniques** can be applied to both classification and regression problems.
-
-The comparison shows that combining multiple learners can provide stronger and more stable results than relying on a single Decision Tree.
-
-### 🏆 Final Winner
-
-**Stacking**
+Possible future extensions:
 
 ```text
-Classification → Best reported overall result
-Regression     → Best reported overall result
-```
-
-The project provides practical experience with the complete machine-learning workflow:
-
-```text
-Data
- ↓
-Preprocessing
- ↓
-Model Training
- ↓
-Ensemble Learning
- ↓
-Evaluation
- ↓
-Comparison
- ↓
-Best Model
+🔹 Hyperparameter Optimization
+🔹 Cross-Validation
+🔹 Feature Importance Analysis
+🔹 SHAP Explainability
+🔹 Streamlit Prediction App
+🔹 Model Saving with Joblib
+🔹 REST API Deployment
+🔹 Cloud Deployment
 ```
 
 ---
+
+# 🏁 Final Conclusion
+
+This project provides a practical and complete comparison of **ensemble learning techniques for classification and regression**.
+
+The experiments demonstrate that ensemble approaches can significantly improve upon a single Decision Tree baseline.
+
+### 🏆 Final Recommended Models
+
+| Task              | Best Model              |          Result |
+| ----------------- | ----------------------- | --------------: |
+| 🎯 Classification | **Stacking Classifier** | F1 = **0.6316** |
+| 📈 Regression     | **Stacking Regressor**  | R² = **0.4947** |
+
+The project demonstrates the practical value of **Bagging, Boosting, Voting and Stacking** for building stronger machine learning solutions.
+
+---
+
+# 👨‍💻 Author
 
 <div align="center">
 
-# ⭐ If you found this project useful, please give the repository a star!
+### **Manan**
 
-### 🐍 Python | 🤖 Machine Learning | 📊 Ensemble Learning
+🐍 Python • 🤖 Machine Learning • 📊 Data Science
+
+---
+
+### ⭐ If you found this project useful, consider giving the repository a star!
 
 **Made with ❤️ by Manan**
 
